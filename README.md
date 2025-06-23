@@ -1,4 +1,4 @@
-# LES_Fit
+# les_fit
 
 ## Summary 
 We present **LES (Latent Ewald Summation)** ([https://github.com/ChengUCB/les](https://github.com/ChengUCB/les)) as a plug-in library designed to add long-range interactions to short-range machine learning interatomic potentials (MLIPs). 
