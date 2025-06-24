@@ -56,7 +56,7 @@ dyn = IsotropicMTKNPT(
     pdamp=500 * units.fs,
     tchain=5,
     pchain=5,
-    tloop=2,
+    tloop=1,
     ploop=2
 )
 
