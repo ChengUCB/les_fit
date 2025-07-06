@@ -1,0 +1,22 @@
+python /mace/scripts/run_train.py \
+    --name="H20" \
+    --train_file="../train-H2O_RPBE-D3.xyz" \
+    --valid_fraction=0.05 \
+    --test_file="../test-H2O_RPBE-D3.xyz" \
+    --energy_key="energy" \
+    --forces_key="forces" \
+    --E0s='average' \
+    --model="MACELES" \
+    --hidden_irreps='128x0e' \
+    --r_max=4.5 \
+    --num_interactions=2 \
+    --batch_size=4 \
+    --max_num_epochs=1000 \
+    --stage_two \
+    --start_stage_two=500 \
+    --ema \
+    --ema_decay=0.99 \
+    --amsgrad \
+    --restart_latest \
+    --device=cuda \
+    --default_dtype="float32"\

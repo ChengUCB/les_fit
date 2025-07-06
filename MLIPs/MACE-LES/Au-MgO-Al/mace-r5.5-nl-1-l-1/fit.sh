@@ -1,0 +1,22 @@
+python /mace/scripts/run_train.py \
+    --name="Au2-MgO" \
+    --train_file="../train-Au-MgO-Al.xyz" \
+    --valid_fraction=0.05 \
+    --test_file="../test-Au-MgO-Al.xyz" \
+    --energy_key="energy" \
+    --forces_key="forces" \
+    --E0s='average' \
+    --model="MACE" \
+    --hidden_irreps='128x0e + 128x1o' \
+    --r_max=5.5 \
+    --num_interactions=2 \
+    --batch_size=10 \
+    --max_num_epochs=1000 \
+    --stage_two \
+    --start_stage_two=500 \
+    --ema \
+    --ema_decay=0.99 \
+    --amsgrad \
+    --restart_latest \
+    --device=cuda \
+    --save_cpu \
