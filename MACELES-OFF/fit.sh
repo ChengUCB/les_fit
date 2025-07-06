@@ -1,0 +1,36 @@
+srun python path_to_mace/scripts/run_train.py \
+    --name="MACELES-OFF_small.model" \
+    --train_file="../off_4.5_train/" \
+    --valid_file="../off_4.5_val/" \
+    --test_file="../off_4.5_val/" \
+    --statistics_file="../off_statistics.json" \
+    --E0s="{35: -70045.28385080204, 6: -1030.5671648271828, 17: -12522.649269035726, 9: -2715.318528602957, 1: -13.571964772646918, 53: -8102.524593409054, 7: -1486.3750255780376, 8: -2043.933693071156, 15: -9287.407133426237, 16: -10834.4844708122}" \
+    --model="MACELES" \
+    --num_interactions=2 \
+    --num_channels=192 \
+    --max_L=1 \
+    --correlation=3 \
+    --r_max=4.5 \
+    --forces_weight=1000 \
+    --energy_weight=40 \
+    --weight_decay=5e-10 \
+    --clip_grad=1.0 \
+    --batch_size=128 \
+    --valid_batch_size=128 \
+    --max_num_epochs=500 \
+    --scheduler_patience=40 \
+    --patience=20 \
+    --eval_interval=1 \
+    --ema \
+    --swa \
+    --start_swa=400 \
+    --swa_lr=0.00025 \
+    --swa_forces_weight=10 \
+    --num_workers=64 \
+    --error_table='PerAtomMAE' \
+    --default_dtype="float32"\
+    --device=cuda \
+    --seed=123 \
+    --restart_latest \
+    --distributed \
+    --save_cpu \
