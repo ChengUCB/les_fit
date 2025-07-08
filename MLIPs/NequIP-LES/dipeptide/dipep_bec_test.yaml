@@ -1,0 +1,107 @@
+# ===========
+#     RUN
+# ===========
+run: [test]
+
+cutoff_radius: 
+chemical_symbols: [H,C,N,O] 
+model_type_names: ${chemical_symbols}
+
+# ============
+#     DATA
+# ============
+data:
+  _target_: nequip.data.datamodule.ASEDataModule
+  seed: 456             # dataset seed for reproducibility
+  
+  split_dataset: 
+    - file_path: ../data-sets/spice-dipep-dipolar_train.xyz
+      train: 0.95
+      val: 0.05
+  test_file_path: ../data-sets/spice-dipep-dipolar_val.xyz
+  
+  transforms:
+    - _target_: nequip.data.transforms.NeighborListTransform
+      r_max: ${cutoff_radius}
+    - _target_: nequip.data.transforms.ChemicalSpeciesToAtomTypeMapper
+      chemical_symbols: ${chemical_symbols}
+  train_dataloader:
+    _target_: torch.utils.data.DataLoader
+    batch_size: 2
+    num_workers: 5
+    shuffle: true
+  val_dataloader:
+    _target_: torch.utils.data.DataLoader
+    batch_size: 5
+    num_workers: 5  # we want to use the same num_workers -- variable interpolation helps
+  test_dataloader: ${data.val_dataloader}  # variable interpolation comes in handy again
+
+  stats_manager:
+    _target_: nequip.data.CommonDataStatisticsManager
+    dataloader_kwargs:
+      batch_size: 10
+    type_names: ${model_type_names}
+
+
+# =============
+#    TRAINER
+# =============
+trainer:
+  _target_: lightning.Trainer
+  accelerator: gpu
+  enable_checkpointing: true
+  max_epochs: 5
+  max_time: 03:00:00:00
+  check_val_every_n_epoch: 1  # how often to validate
+  log_every_n_steps: 1       # how often to log
+  
+  # and any custom callbakcs that subclass Lightning's Callback parent class
+  callbacks:
+  - _target_: nequip.train.callbacks.TestTimeXYZFileWriter
+    out_file: ./predictions/test
+    output_fields_from_original_dataset: [total_energy, forces]
+    chemical_symbols: ${chemical_symbols}
+
+  #LES-BEC TOGGLE
+  - _target_: nequip.train.callbacks.ToggleLESCallback
+    compute_bec: true
+    #bec_output_index: None # 0, 1, 2 for x,y,z    
+
+# =====================
+#    TRAINING MODULE
+# =====================
+training_module:
+
+  _target_: nequip.train.EMALightningModule
+  # the ema decay parameter of an EMA model
+  ema_decay: 0.999
+
+  # here, we use a simplified MetricsManager wrapper (see docs) to construct the energy-force loss function
+  # the more general `nequip.train.MetricsManager` could also be used to configure a custom loss function
+  loss:
+    _target_: nequip.train.EnergyForceLoss
+    per_atom_energy: true
+    coeffs:
+      total_energy: 1.0
+      forces: 1.0
+  # we could have train_metrics and test_metrics be different from val_metrics, but it makes sense to have them be the same
+  val_metrics:
+    _target_: nequip.train.EnergyForceMetrics
+    coeffs:
+      total_energy_mae: 1.0
+      forces_mae: 1.0
+  train_metrics: ${training_module.val_metrics}  # use variable interpolation
+  test_metrics: ${training_module.val_metrics}  # use variable interpolation
+
+  # model details
+  model:
+    _target_: nequip.model.ModelFromCheckpoint
+    checkpoint_path: 
+
+# ====================
+#    GLOBAL OPTIONS   
+# ====================
+global_options:
+  # whether to use TensorFloat32, which will be faster on GPUs with tensor cores at the cost of precision loss
+  # see "Advanced Usage" section of the docs for more details
+  allow_tf32: false
