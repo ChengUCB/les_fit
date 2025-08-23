@@ -9,7 +9,7 @@ Here you can find MLIP packages **with LES implementation**.
 |---------|------|
 | **CACE**   | [github.com/BingqingCheng/cace](https://github.com/BingqingCheng/cace) |
 | **MACE**   | [github.com/ChengUCB/mace](https://github.com/ChengUCB/mace) |
-| **NequIP** | [github.com/ChengUCB/nequip](https://github.com/ChengUCB/nequip) |
+| **NequIP** | [github.com/ChengUCB/NequIP-LES](https://github.com/ChengUCB/NequIP-LES) |
 | **MatGL**  | [github.com/ChengUCB/matgl](https://github.com/ChengUCB/matgl) |
 
 ## Usage 
