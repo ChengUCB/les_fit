@@ -2,7 +2,7 @@
 
 ## Summary 
 We present **LES (Latent Ewald Summation)** ([https://github.com/ChengUCB/les](https://github.com/ChengUCB/les)) as a plug-in library designed to add long-range interactions to short-range machine learning interatomic potentials (MLIPs). 
-Here we demonstrate its integration with MLIPs such as **MACE**, **NequIP**, **CACE**, and **CHGNet**, and provide training scripts and trained models. In particular, we provide **MACELES-OFF** trained on the SPICE dataset. 
+Here we demonstrate its integration with MLIPs such as **MACE**, **NequIP**, **Allegro**, **CACE**, and **CHGNet**, and provide training scripts and trained models. In particular, we provide **MACELES-OFF** trained on the SPICE dataset. 
 
 Here you can find MLIP packages **with LES implementation**.
 | Package | Link |
@@ -10,6 +10,7 @@ Here you can find MLIP packages **with LES implementation**.
 | **CACE**   | [github.com/BingqingCheng/cace](https://github.com/BingqingCheng/cace) |
 | **MACE**   | [github.com/ChengUCB/mace](https://github.com/ChengUCB/mace) |
 | **NequIP** | [github.com/ChengUCB/NequIP-LES](https://github.com/ChengUCB/NequIP-LES) |
+| **Allegro** | [github.com/ChengUCB/NequIP-LES](https://github.com/ChengUCB/NequIP-LES) |
 | **MatGL**  | [github.com/ChengUCB/matgl](https://github.com/ChengUCB/matgl) |
 
 ## Usage 
@@ -33,12 +34,18 @@ This project is licensed under the CC BY-NC 4.0 License.
   publisher={Nature Publishing Group UK London}
 }
 
-@article{kim2024learning,
-  title={Learning charges and long-range interactions from energies and forces},
-  author={Kim, Dongjin and King, Daniel S and Zhong, Peichen and Cheng, Bingqing},
-  journal={arXiv preprint arXiv:2412.15455},
-  year={2024}
+@article{King2025Machine,
+  title = {Machine Learning of Charges and Long-Range Interactions from Energies and Forces},
+  author = {King, Daniel S. and Kim, Dongjin and Zhong, Peichen and Cheng, Bingqing},
+  journal = {Nature Communications},
+  volume = {16},
+  number = {1},
+  pages = {8763},
+  year = {2025},
+  publisher = {Nature Publishing Group},
+  doi = {10.1038/s41467-025-63852-x},
 }
+
 
 @article{zhong2025machine,
   title={Machine learning interatomic potential can infer electrical response},
