@@ -16,7 +16,7 @@ Here you can find MLIP packages **with LES implementation**.
 | **MatGL**  | [github.com/ChengUCB/matgl](https://github.com/ChengUCB/matgl) |
 
 ## 📣 Update [2025-10]
-The **`MACELES`** model has been implemented in the main [**MACE** repository](https://github.com/ACEsuit/mace). Example training and evaluation scripts are available in `./MLIPs/MACE-LES-2025-10`.
+The **`MACELES`** model has been implemented in the main [**MACE** repository](https://github.com/ACEsuit/mace). Example training and evaluation scripts are available in `./MLIPs/MACE-LES-new`.
 
 
 ## Usage 
