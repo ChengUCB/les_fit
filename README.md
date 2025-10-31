@@ -4,7 +4,8 @@
 We present **LES (Latent Ewald Summation)** ([https://github.com/ChengUCB/les](https://github.com/ChengUCB/les)) as a plug-in library designed to add long-range interactions to short-range machine learning interatomic potentials (MLIPs). 
 
 This repository contains the data and scripts used in the study [*A Universal Augmentation Framework for Long-Range Electrostatics in Machine Learning Interatomic Potentials*](https://arxiv.org/abs/2507.14302).
-Here we demonstrate its integration with MLIPs such as **MACE**, **NequIP**, **Allegro**, **CACE**, and **CHGNet**, and provide training scripts and trained models. In particular, we provide **MACELES-OFF** trained on the SPICE dataset with the **MACE** package provided below. 
+Here we demonstrate its integration with MLIPs such as **MACE**, **NequIP**, **Allegro**, **CACE**, and **CHGNet**, and provide training scripts and trained models. 
+In particular, we provide **MACELES-OFF** trained on the SPICE dataset with the **MACE** package developed by the Cheng group (https://github.com/ChengUCB/mace). 
 
 Here you can find MLIP packages **with LES implementation**.
 | Package | Link |
