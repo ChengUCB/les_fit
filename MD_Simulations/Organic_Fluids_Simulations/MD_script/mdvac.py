@@ -43,8 +43,6 @@ from ase.md import Langevin
 timestep = 1 * units.fs
 friction = 0.1 / (1000 * units.fs)  # Adjust friction coefficient as needed
 dyn = Langevin(atoms, timestep, temperature_K=temperature, friction=friction)
-#ttime = 20 * units.fs  # Thermostat time constant
-#dyn = NoseHoover(atoms, timestep, temperature=temperature * units.kB, ttanh=ttime)
 
 
 def print_energy(a=atoms):
