@@ -5,7 +5,8 @@ We present **LES (Latent Ewald Summation)** ([https://github.com/ChengUCB/les](h
 
 This repository contains the data and scripts used in the study [*A Universal Augmentation Framework for Long-Range Electrostatics in Machine Learning Interatomic Potentials*](https://arxiv.org/abs/2507.14302).
 Here we demonstrate its integration with MLIPs such as **MACE**, **NequIP**, **Allegro**, **CACE**, and **CHGNet**, and provide training scripts and trained models. 
-In particular, we provide **MACELES-OFF** trained on the SPICE dataset with the **MACE** package developed by the Cheng group (https://github.com/ChengUCB/mace). The converted **MACELES-OFF** is also compatabile with the current [**MACE** repository](https://github.com/ACEsuit/mace). 
+In particular, we provide **MACELES-OFF** model trained on the SPICE dataset using the the [**MACE** package](https://github.com/ChengUCB/mace) developed by the Cheng group, while the **converted MACELES-OFF** model is also compatible with the current [**MACE** main branch](https://github.com/ACEsuit/mace).
+
 
 Here you can find MLIP packages **with LES implementation**.
 | Package | Link |
