@@ -5,20 +5,21 @@ We present **LES (Latent Ewald Summation)** ([https://github.com/ChengUCB/les](h
 
 This repository contains the data and scripts used in the study [*A Universal Augmentation Framework for Long-Range Electrostatics in Machine Learning Interatomic Potentials*](https://arxiv.org/abs/2507.14302).
 Here we demonstrate its integration with MLIPs such as **MACE**, **NequIP**, **Allegro**, **CACE**, and **CHGNet**, and provide training scripts and trained models. 
-In particular, we provide **MACELES-OFF** trained on the SPICE dataset with the **MACE** package developed by the Cheng group (https://github.com/ChengUCB/mace). 
+In particular, we provide **MACELES-OFF** trained on the SPICE dataset with the **MACE** package developed by the Cheng group (https://github.com/ChengUCB/mace). The converted **MACELES-OFF** is also compatabile with the current [**MACE** repository](https://github.com/ACEsuit/mace). 
 
 Here you can find MLIP packages **with LES implementation**.
 | Package | Link |
 |---------|------|
 | **CACE**   | [github.com/BingqingCheng/cace](https://github.com/BingqingCheng/cace) |
-| **MACE**   | [github.com/ChengUCB/mace](https://github.com/ChengUCB/mace) |
+| **MACE(original)**   | [github.com/ChengUCB/mace](https://github.com/ChengUCB/mace) |
+| **MACE(new)**   | [github.com/ChengUCB/mace](https://github.com/ACEsuit/mace) |
 | **NequIP** | [github.com/ChengUCB/NequIP-LES](https://github.com/ChengUCB/NequIP-LES) |
 | **Allegro** | [github.com/ChengUCB/NequIP-LES](https://github.com/ChengUCB/NequIP-LES) |
 | **MatGL**  | [github.com/ChengUCB/matgl](https://github.com/ChengUCB/matgl) |
 
 ## 📣 Update [2025-10]
 The **`MACELES`** model has been implemented in the main [**MACE** repository](https://github.com/ACEsuit/mace). Example training and evaluation scripts are available in `./MLIPs/MACE-LES-new`.
-
+The converted MACELES-OFF model (MACELES-OFF_small_converted.model, MD5: cc10e937b55e09f05b16dba756e2311b) is also compatible with the main MACE branch.
 
 ## Usage 
 Please refer to the specific folder for related scripts and trained MLIPs.
