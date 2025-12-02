@@ -5,22 +5,22 @@ We present **LES (Latent Ewald Summation)** ([https://github.com/ChengUCB/les](h
 
 This repository contains the data and scripts used in the study [*A Universal Augmentation Framework for Long-Range Electrostatics in Machine Learning Interatomic Potentials*](https://arxiv.org/abs/2507.14302).
 Here we demonstrate its integration with MLIPs such as **MACE**, **NequIP**, **Allegro**, **CACE**, and **CHGNet**, and provide training scripts and trained models. 
-In particular, we provide **MACELES-OFF** model trained on the SPICE dataset using the the [**MACE** package](https://github.com/ChengUCB/mace) developed by the Cheng group, while the **converted MACELES-OFF** model is also compatible with the current [**MACE** main branch](https://github.com/ACEsuit/mace).
-
+In particular, we provide **MACELES-OFF** model trained on the SPICE dataset using the the [**MACE** package](https://github.com/ChengUCB/mace) developed by the Cheng group, while the [**converted MACELES-OFF**](https://github.com/ChengUCB/les_fit/blob/main/MACELES-OFF/MACELES-OFF_small_converted.model) model is compatible with the current [**MACE** main branch](https://github.com/ACEsuit/mace).
 
 Here you can find MLIP packages **with LES implementation**.
 | Package | Link |
 |---------|------|
 | **CACE**   | [github.com/BingqingCheng/cace](https://github.com/BingqingCheng/cace) |
-| **MACE(original)**   | [github.com/ChengUCB/mace](https://github.com/ChengUCB/mace) |
-| **MACE(new)**   | [github.com/ChengUCB/mace](https://github.com/ACEsuit/mace) |
+| **MACE**   | [github.com/ChengUCB/mace](https://github.com/ChengUCB/mace) |
+| **MACE(updated)**   | [github.com/ACEsuit/mace](https://github.com/ACEsuit/mace) |
 | **NequIP** | [github.com/ChengUCB/NequIP-LES](https://github.com/ChengUCB/NequIP-LES) |
 | **Allegro** | [github.com/ChengUCB/NequIP-LES](https://github.com/ChengUCB/NequIP-LES) |
 | **MatGL**  | [github.com/ChengUCB/matgl](https://github.com/ChengUCB/matgl) |
 
-## 📣 Update [2025-10]
-The **`MACELES`** model has been implemented in the main [**MACE** repository](https://github.com/ACEsuit/mace). Example training and evaluation scripts are available in `./MLIPs/MACE-LES-new`.
-The converted MACELES-OFF model (MACELES-OFF_small_converted.model, MD5: cc10e937b55e09f05b16dba756e2311b) is also compatible with the main MACE branch.
+## 📣 Update 
+[2025-10] The **`MACELES`** model has been implemented in the main [**MACE** repository](https://github.com/ACEsuit/mace). Example training and evaluation scripts are available in `./MLIPs/MACE-LES-new`.
+
+[2025-12] For the [**MACE** main branch](https://github.com/ACEsuit/mace), one needs to use the [**converted MACELES-OFF model**](https://github.com/ChengUCB/les_fit/blob/main/MACELES-OFF/MACELES-OFF_small_converted.model) (MD5: cc10e937b55e09f05b16dba756e2311b).
 
 ## Usage 
 Please refer to the specific folder for related scripts and trained MLIPs.
