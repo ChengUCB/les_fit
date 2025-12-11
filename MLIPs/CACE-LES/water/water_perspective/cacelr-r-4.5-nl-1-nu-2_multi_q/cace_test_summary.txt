@@ -1,0 +1,6 @@
+# channel_num  per_atom_RMSE_meV_per_atom  force_RMSE_eV_per_A
+1  0.306  0.02752
+2  0.290  0.02676
+4  0.308  0.02742
+8  0.314  0.02814
+16  0.287  0.02922

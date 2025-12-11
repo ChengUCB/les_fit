@@ -1,0 +1,53 @@
+Start: Sun Dec  7 20:57:28 PST 2025
+cwd: /global/scratch/users/dongjinkim/potential_training/MACE-LES/water/learning_curve_perspective
+========================================
+Training in directory: mace-les-r45-nl2-l1_5
+========================================
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Finished: mace-les-r45-nl2-l1_5
+========================================
+Training in directory: mace-les-r45-nl2-l1_10
+========================================
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Finished: mace-les-r45-nl2-l1_10
+========================================
+Training in directory: mace-les-r45-nl2-l1_20
+========================================
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Finished: mace-les-r45-nl2-l1_20
+========================================
+Training in directory: mace-les-r45-nl2-l1_30
+========================================
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Finished: mace-les-r45-nl2-l1_30
+========================================
+Training in directory: mace-les-r45-nl2-l1_50
+========================================
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Finished: mace-les-r45-nl2-l1_50
+========================================
+Training in directory: mace-les-r45-nl2-l1_100
+========================================
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Finished: mace-les-r45-nl2-l1_100
+========================================
+Training in directory: mace-les-r45-nl2-l1_200
+========================================
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Finished: mace-les-r45-nl2-l1_200
+========================================
+Training in directory: mace-les-r45-nl2-l1_300
+========================================
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Finished: mace-les-r45-nl2-l1_300
+========================================
+Training in directory: mace-les-r45-nl2-l1_400
+========================================
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Finished: mace-les-r45-nl2-l1_400
+========================================
+Training in directory: mace-les-r45-nl2-l1_500
+========================================
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Finished: mace-les-r45-nl2-l1_500
+End: Sun Dec  7 21:01:03 PST 2025
