@@ -11,7 +11,7 @@ Here you can find MLIP packages **with LES implementation**.
 | Package | Link |
 |---------|------|
 | **CACE**   | [github.com/BingqingCheng/cace](https://github.com/BingqingCheng/cace) |
-| **MACE**   | [github.com/ChengUCB/mace](https://github.com/ChengUCB/mace) |
+| **MACE**   | [github.com/ChengUCB/mace](https://github.com/ChengUCB/mace/tree/original) |
 | **MACE(updated)**   | [github.com/ACEsuit/mace](https://github.com/ACEsuit/mace) |
 | **NequIP** | [github.com/ChengUCB/NequIP-LES](https://github.com/ChengUCB/NequIP-LES) |
 | **Allegro** | [github.com/ChengUCB/NequIP-LES](https://github.com/ChengUCB/NequIP-LES) |
